@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsiveness.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <title>Euro Cabs</title>
+</head>
+
+<body>
+  <!-- <div id="loader">
+    <h1>0%</h1>
+  </div> -->
+  <div class="scroll-top-btn">
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up fa-bounce"></i></button>
+  </div>
+
+  <div class="main-container">
+    <div id="navbar">
+      <a><img src="assets/images/eurocabs-logo.png" alt="" id="nav-logo"></a>
+
+      <div id="nav-elements">
+        <!-- <a href="">Airport rates</a> -->
+        <a href="https://apps.apple.com/gb/app/eurocabs/id1450809935" id="download">Download Our
+          App</a>
+        <a href="#" id="openModalBtn-1" class="register openModalBtn" onclick="setupModal()">Register As a Driver</a>
+      </div>
+
+      <!-- responsive navbar -->
+      <nav class="navbar-responsive">
+        <button type="button" class="btn-bars"> <span><i class="fas fa-bars"></i></span>
+        </button>
+        <div class="navbar-collapse">
+          <span class="btn-close">
+            <i class="fas fa-times"></i>
+          </span>
+          <ul class="navbar-nav-responsive">
+            <li class="nav-item-responsive">
+              <a href="#" class="nav-link-responsive">Book A Taxi</a>
+            </li>
+            <li class="nav-item-responsive">
+              <a href="setupModal()" class="nav-link-responsive" onclick="setupModal()" id="openModalBtn-nav">Driver
+                Login</a>
+            </li>
+            <li class="nav-item-responsive">
+              <a href="#" class="nav-link-responsive">Earn With Euro Cabs</a>
+            </li>
+            <li class="nav-item-responsive">
+              <a href="#" class="nav-link-responsive">Corporate Accounts</a>
+            </li>
+            <li class="nav-item-responsive">
+              <a href="#" class="nav-link-responsive">FAQs</a>
+            </li>
+            <li class="nav-item-responsive">
+              <a href="#table-container" class="nav-link-responsive">Airport Rates</a>
+            </li>
+            <li class="nav-item-responsive">
+              <a href="#services-section" class="nav-link-responsive">Our Services</a>
+            </li>
+            <li class="nav-item-responsive">
+              <a href="#" class="nav-link-responsive">Safety</a>
+            </li>
+            <li class="nav-item-responsive">
+              <a href=".form-container" class="nav-link-responsive">Help</a>
+            </li>
+          </ul>
+
+          <div class="nav-social-icon">
+            <a href="#"><i class="fab fa-facebook"></i><span></span></a>
+            <a href="#"><i class="fab fa-twitter"></i><span></span></a>
+            <a href="#"><i class="fab fa-google-play"></i><span></span></a>
+            <a href="#"><i class="fab fa-apple"></i><span></span></a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div id="content">
+      <div class="left">
+        <h3>Welcome To <span>Euro Cabs</span> </h3>
+        <p>
+          Trusted Taxi Service for 20 Years, Serving
+          Corporations and Individuals Locally.
+        </p>
+        <div class="header-links">
+          <a href="#" id="booking-btn">Book A Cab</a>
+          <a href="http://onelink.to/5yqht7">Download Our App</a>
+          <a id="openModalBtn-responsive" onclick="setupModal()" class="openModalBtn">Register As a Driver</a>
+          <!-- https://forms.office.com/r/m1CS32hq9E -->
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p style="color: #000000;">Select area</p>
+              <ul id="cityList">
+                <li data-link="https://www.example.com/city1">North Hertfordshire</li>
+                <!-- <li data-link="https://www.example.com/city2">Luton</li>
+                <li data-link="https://www.example.com/city3">Heathrow</li>
+                <li data-link="https://www.example.com/city4">Gatwick</li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <img src="assets/images/new-logo.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div id="table-container">
+    <h1 class="heading">airport transfer rates</h1> <br>
+    <h2>Click on a city code to display information:</h2>
+    <ul>
+      <li><a onclick="displayInfo('LHR')">LHR - London Heathrow</a></li>
+      <li><a onclick="displayInfo('LTN')">LTN - Luton</a></li>
+      <li><a onclick="displayInfo('LGW')">LGW - Gatwick</a></li>
+      <li><a onclick="displayInfo('STD')">STD - Stansted</a></li>
+      <li><a onclick="displayInfo('LCY')">LCY - London City Airport</a></li>
+    </ul>
+
+    <div id="cityInfo"></div>
+    <a href="https://eb3.autocab.net/#/36364" class="airport-booking">Book A Cab</a>
+  </div>
+
+  <div id="services-section">
+    <h1 class="heading">Our Services</h1>
+    <div class="services-grid">
+      <div class="service-item">
+        <img src="assets/images/rides.jpg" alt="Service 1">
+        <h3>Rides</h3>
+        <p>Request in seconds ride until you are satisfied with an affordable cost .</p>
+      </div>
+      <div class="service-item">
+        <img src="assets/images/airport.png" alt="Service 2">
+        <h3>Airports</h3>
+        <p>We provide cab serivices in the areas of luton in an affordable cost.</p>
+      </div>
+      <div class="service-item">
+        <img src="assets/images/business.jpg" alt="Service 3">
+        <h3>Business</h3>
+        <p>Manage business travel for your team and clients with Euro cabs with an budget friendly package.</p>
+      </div>
+      <div class="service-item">
+        <img src="assets/images/selfdrive.png" alt="Service 4">
+        <h3>Drive</h3>
+        <p>Drive Seimlessly With Euor cabs at a affordable rates.</p>
+      </div>
+      <div class="service-item">
+        <img src="assets/images/franchise.png" alt="Service 5">
+        <h3>School Transport</h3>
+        <p>We also provide Franchise Services For your cities .</p>
+      </div>
+      <div class="service-item">
+        <img src="assets/images/sens.png" alt="Service 6">
+        <h3>SENS Transport</h3>
+        <p>we also provide who are deemed eligible for transport.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="about-container">
+    <h1 class="heading">About Us</h1>
+    <p class="para">
+      Eurocabs is one of the oldest and most established taxi companies in
+      Letchworth Garden City. We have a track record for providing a reliable
+      and punctual service over the past 20 years. Eurocabs caters to the
+      needs of corporate businesses to individuals who want to travel locally.
+    </p>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46762.38651489585!2d-0.2749252815631878!3d51.976892929813886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48763233cbbba8d1%3A0x4e1913f5b672bfc4!2sLetchworth%20Garden%20City%2C%20UK!5e0!3m2!1sen!2sin!4v1700304140777!5m2!1sen!2sin"
+      width="600" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade" id="map"></iframe>
+  </div>
+
+  <!-- cards section -->
+  <!-- <div class="fares-area">
+    <h1 class="heading">Fares & Charges</h1>
+    <p class="details" style="text-align: center; padding: 12px;">Statement of Hackney Carriage Fares and Charges in the
+      North Hertfordshire District*:</p>
+    <div class="fare-container">
+      <div class="fare-section">
+        <div class="fare-details">
+          <h3>TARIFF 1 (Standard)</h3>
+          <ul>
+            <li>£3.00- for the first 1,135 yards or part thereof</li>
+            <li>£0.10 - after the first 1,135 yards, for every 77 yards or part thereof</li>
+            <li>OR for each 25 seconds or part thereof (waiting time)</li>
+          </ul>
+          <a href="#" class="book-now-btn">Book Now</a>
+        </div>
+
+        <div class="fare-details">
+          <h3>TARIFF 2</h3>
+          <ul>
+            <li>For hirings commencing between between Midnight and 6.00am plus Bank Holidays.</li>
+            <li>£4.50 - for the first 1,135 yards or part thereof</li>
+            <li>£0.15 - after the first 1,135 yards, for every 77 yards or part thereof</li>
+            <li>OR for each 25 seconds or part thereof (waiting time)</li>
+          </ul>
+          <a href="#" class="book-now-btn">Book Now</a>
+        </div>
+
+        <div class="fare-details">
+          <h3>TARIFF 3</h3>
+          <ul>
+            <li>For hirings commencing all day Christmas Day only</li>
+            <li>£6.00 - for the first 1,135 yards or part thereof</li>
+            <li>£0.20 - after the first 1,135 yards, for every 77 yards or part thereof</li>
+            <li>OR for each 25 seconds or part thereof (waiting time)</li>
+          </ul>
+          <a href="#" class="book-now-btn">Book Now</a>
+        </div>
+      </div>
+
+      <div class="additional-charges">
+        <h2>ADDITIONAL CHARGES</h2>
+        <p>£50.00 - for spoiling the inside of the Hackney Carriage</p>
+        <a href="#" class="book-now-btn">Book Now</a>
+      </div>
+
+      <li class="note">All fares recorded by the taximeter are inclusive of value added tax and are the maximum that can
+        be charged for
+        the journey.</li>
+    </div>
+  </div> -->
+
+  <!-- Faq Section -->
+
+  <div id="faq-section">
+    <div class="container">
+      <h1 id="faq-heading" class="heading">Frequently Asked Questions</h1>
+      <img src="assets/images/icon-executive.png" alt="" id="faq-logo">
+      <div class="accordion">
+        <div class="accordion-item">
+          <button id="accordion-button-1" aria-expanded="false">
+            <span class="accordion-title">I Have Lost Something In One Of Your Taxis, How Do I Reclaim My
+              Property?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Please Email The Description Of The Journey You Took Together With The Details Of The Item You Have Lost
+              To <a href="mailto:info@eurocabsherts.co.uk">info@Eurocabsherts.Co.Uk</a>. Alternatively, Call Our Office
+              On <a href="tel:01462600700">01462 600 700</a> To Report Your Lost Property.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-2" aria-expanded="false">
+            <span class="accordion-title">Can I Pay By Card?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              You Can Pay For Your Journey In Advance By Card Over The Phone, Or If You Prefer To Pay In The Car Please
+              Download And Register Your Card On Our App And Use That To Hail Your Taxi. The Fare Will Be Deducted From
+              Your Card At The End Of Your Journey.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-3" aria-expanded="false">
+            <span class="accordion-title">Can You Send Me An Invoice?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Yes. Sign Up On Our Website For An Account, And You Will Receive An Invoice.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-4" aria-expanded="false">
+            <span class="accordion-title">How Will The Driver Meet Me At The Airport?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Our Driver Will Contact You On The Mobile Number You Provide At The Time Of Your Booking. You Can
+              Coordinate With Him Or Her To Meet At The Pickup And Drop Off Point At No Extra Charge, Or You Can Request
+              The Driver To Meet You At Arrivals For An Extra £8.00.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">I Have A Complaint, How Do I Contact Management?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              For all complaints, kindly send an email <a
+                href="mailto:info@eurocabsherts.co.uk">info@Eurocabsherts.Co.Uk</a> Our dedicated Complaints Department
+              will promptly contact you to address and resolve your concerns.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-6" aria-expanded="false">
+            <span class="accordion-title">I Live In An Area Outside Of Letchworth, Fairfield Park, Baldock And Hitchin.
+              Can You Provide Taxi Services To Me?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              We offer airport transportation for locations on our Airport Prices page. Local taxi services from
+              villages outside Hitchin, Letchworth, Fairfield Park, or Baldock incur a callout charge based on the
+              pickup location.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="customer-complaints">
+    <h1 class="heading">Complaints Section</h1>
+    <h2>Please send us the the complaints our team will get back to you with in 24 hrs</h2>
+    <div class="complaint-btn">
+      <a href="https://forms.office.com/e/dkSCrzMfZz" id="complaint-btn">Help Me!</a>
+    </div>
+  </div>
+
+
+
+  <!-- footer -->
+  <section class="footer">
+    <div class="footer-row">
+      <div class="footer-col">
+        <h4>Info</h4>
+        <ul class="links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Terms and conditions</a></li>
+          <li><a href="#">Our Service</a></li>
+          <li><a href="#">Suppourt</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul class="links">
+          <li><a href="#">Customer Agreement</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">GDPR</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Media Kit</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p>
+          Subscribe to our newsletter for a weekly dose
+          of news, updates, helpful tips, and
+          exclusive offers.
+        </p>
+        <form action="#">
+          <input type="text" placeholder="Your email" required>
+          <button type="submit">SUBSCRIBE</button>
+        </form>
+        <div class="icons">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-google-play"></i>
+          <i class="fab fa-apple"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+    integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Scroll trigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+    integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- JS  -->
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
