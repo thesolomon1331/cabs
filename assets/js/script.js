@@ -122,7 +122,7 @@ function displayInfo(city) {
       Henlow: { DayCharges: "120", NightCharges: "125" },
       LangfordHanxworth: { DayCharges: "120", NightCharges: "125" },
       Ashwell: { DayCharges: "120", NightCharges: "125" },
-      StotfoldArlserFairfeild: { DayCharges: "50", NightCharges: "125" },
+      StotfoldArlserFairfeild: { DayCharges: "120", NightCharges: "125" },
       Biggleswade: { DayCharges: "120", NightCharges: "125" },
       Shefford: { DayCharges: "120", NightCharges: "125" },
       Royston: { DayCharges: "120", NightCharges: "125" },
