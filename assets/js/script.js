@@ -81,7 +81,7 @@ function displayInfo(city) {
       Letchworth: { DayCharges: "40", NightCharges: "50" },
       Hitchin: { DayCharges: "40", NightCharges: "50" },
       Henlow: { DayCharges: "50", NightCharges: "55" },
-      Langford&Hanxworth: { DayCharges: "50", NightCharges: "55" },
+      Langford: { DayCharges: "50", NightCharges: "55" },
       Ashwell: { DayCharges: "50", NightCharges: "55" },
       StotfoldArlserFairfeild: { DayCharges: "42", NightCharges: "52" },
       Biggleswade: { DayCharges: "59", NightCharges: "59" },
