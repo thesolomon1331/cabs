@@ -64,17 +64,17 @@ button2.addEventListener("click", setupModal);
 function displayInfo(city) {
   var cityInfo = {
     LHR: {
-      Baldock: { DayCharges: "50", NightCharges: "400" },
-      Letchworth: { DayCharges: "50", NightCharges: "400" },
-      Hitchin: { DayCharges: "50", NightCharges: "400" },
-      Henlow: { DayCharges: "50", NightCharges: "400" },
-      LangfordHanxworth: { DayCharges: "50", NightCharges: "400" },
-      Ashwell: { DayCharges: "50", NightCharges: "400" },
-      StotfoldArlserFairfeild: { DayCharges: "50", NightCharges: "400" },
-      Biggleswade: { DayCharges: "50", NightCharges: "400" },
-      Shefford: { DayCharges: "50", NightCharges: "400" },
-      Royston: { DayCharges: "50", NightCharges: "400" },
-      LowerStondon: { DayCharges: "50", NightCharges: "400" },
+      Baldock: { DayCharges: "105", NightCharges: "115" },
+      Letchworth: { DayCharges: "105", NightCharges: "115" },
+      Hitchin: { DayCharges: "105", NightCharges: "115" },
+      Henlow: { DayCharges: "115", NightCharges: "120" },
+      LangfordHanxworth: { DayCharges: "115", NightCharges: "120" },
+      Ashwell: { DayCharges: "105", NightCharges: "115" },
+      StotfoldArlserFairfeild: { DayCharges: "105", NightCharges: "115" },
+      Biggleswade: { DayCharges: "120", NightCharges: "125" },
+      Shefford: { DayCharges: "115", NightCharges: "120" },
+      Royston: { DayCharges: "120", NightCharges: "130" },
+      LowerStondon: { DayCharges: "110", NightCharges: "115" },
     },
     LTN: {
       Baldock: { DayCharges: "50", NightCharges: "400" },
